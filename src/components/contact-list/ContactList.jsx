@@ -1,17 +1,17 @@
 import { useSelector } from 'react-redux';
 import Contact from '../contact/Contact';
 import css from './ContactList.module.css';
-import { selectFilter, selectUser } from '../../redux/selectors';
+import { selectFilter, selectContact } from '../../redux/selectors';
 
 const ContactList = () => {
-  const users = useSelector(selectUser);
+  const contacts = useSelector(selectContact);
   const filter = useSelector(selectFilter);
 
-  const filteredUsers = users.filter(user => {
-    const filteredByName = user.name
+  const filteredContacts = contacts.filter(contact => {
+    const filteredByName = contact.name
       .toLowerCase()
       .includes(filter.toLowerCase());
-    const filteredByNumber = user.number
+    const filteredByNumber = contact.number
       .toLowerCase()
       .includes(filter.toLowerCase());
     return filteredByName || filteredByNumber;
@@ -20,8 +20,8 @@ const ContactList = () => {
   return (
     <>
       <div className={css.contactList}>
-        {filteredUsers.map(user => {
-          return <Contact user={user} key={user.id} />;
+        {filteredContacts.map(contact => {
+          return <Contact contact={contact} key={contact.id} />;
         })}
       </div>
     </>

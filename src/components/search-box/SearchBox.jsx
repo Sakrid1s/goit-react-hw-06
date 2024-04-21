@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import css from './SearchBox.module.css';
-import { filteredUser } from '../../redux/actions';
+import { filteredContact } from '../../redux/actions';
 import { selectFilter } from '../../redux/selectors';
 
 const SearchBox = () => {
@@ -9,7 +9,7 @@ const SearchBox = () => {
 
   const handleFilterUsers = event => {
     const newFilter = event.target.value;
-    const action = filteredUser(newFilter);
+    const action = filteredContact(newFilter);
     dispatch(action);
   };
 

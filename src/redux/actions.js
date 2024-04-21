@@ -1,19 +1,19 @@
 import * as Types from './constants';
 
-export const addNewUser = newUser => {
-  return { type: Types.ADD_NEW_CONTACT, payload: newUser };
+export const addNewContact = newContact => {
+  return { type: Types.ADD_NEW_CONTACT, payload: newContact };
 };
 
-export const deleteUser = id => {
+export const deleteContact = id => {
   return {
     type: Types.REMOVE_CONTACT,
     payload: id,
   };
 };
 
-export const filteredUser = user => {
+export const filteredContact = contact => {
   return {
     type: Types.FILTERED_CONTACT,
-    payload: user,
+    payload: contact,
   };
 };
