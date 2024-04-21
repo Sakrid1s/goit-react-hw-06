@@ -26,17 +26,6 @@ const ContactForm = () => {
   const nameFieldId = nanoid();
   const numberFieldId = nanoid();
 
-  // const addUser = newUser => {
-  //   const action = {
-  //     type: 'contacts/addUser',
-  //     payload: newUser,
-  //   };
-  //   dispatch(action);
-  //   // setUsers(prevUsers => {
-  //   //   return [...prevUsers, newUser];
-  //   // });
-  // };
-
   const handleSubmit = (values, actions) => {
     const { name, number } = values;
     const newUser = {
@@ -46,11 +35,6 @@ const ContactForm = () => {
     };
     const action = addNewUser(newUser);
     dispatch(action);
-    // addUser({
-    //   id: nanoid(),
-    //   name,
-    //   number,
-    // });
     actions.resetForm();
   };
 

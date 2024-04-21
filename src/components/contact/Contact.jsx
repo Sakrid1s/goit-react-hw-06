@@ -10,9 +10,6 @@ const Contact = ({ user }) => {
   const removeUser = userId => {
     const action = deleteUser(userId);
     dispatch(action);
-    // setUsers(allUsers => {
-    //   return allUsers.filter(user => user.id !== userId);
-    // });
   };
   return (
     <div className={css.contactItem}>
