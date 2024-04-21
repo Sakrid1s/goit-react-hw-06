@@ -1,0 +1,2 @@
+export const selectUser = state => state.contacts.items;
+export const selectFilter = state => state.filters.name;
