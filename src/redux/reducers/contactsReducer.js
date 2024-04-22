@@ -8,7 +8,7 @@ export const contactsReducer = createReducer(initialState, builder => {
     .addCase(Types.ADD_NEW_CONTACT, (state, action) => {
       state.items.push(action.payload);
     })
-    .addCase(Types.REMOVE_CONTACT, (state, action) => {
+    .addCase(Types.DELETE_CONTACT, (state, action) => {
       state.items = state.items.filter(item => item.id !== action.payload);
     });
 });
