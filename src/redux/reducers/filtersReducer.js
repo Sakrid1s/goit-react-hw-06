@@ -1,8 +1,8 @@
 import * as Types from '../constants';
 
-const initalState = { name: '' };
+const initialState = { name: '' };
 
-export const filtersReducer = (state = initalState, action) => {
+export const filtersReducer = (state = initialState, action) => {
   switch (action.type) {
     case Types.FILTERED_CONTACT:
       return {
